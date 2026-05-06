@@ -54,17 +54,25 @@ the repository first, then run all Python commands inside the cloned folder. Do
 not run `pip install -e .` from `C:\Users\shtik` unless that folder itself
 contains `pyproject.toml`.
 
-From Windows Command Prompt:
+From Windows Command Prompt, using your Windows user folder and the
+`optionbot_codex` project name:
 
 ```bat
 cd C:\Users\shtik
-git clone https://github.com/YOUR_USER/YOUR_REPO.git optionbot_codex
+git clone https://github.com/shtik/optionbot_codex.git optionbot_codex
 cd optionbot_codex
 dir pyproject.toml
 python -m venv .venv
 .venv\Scripts\activate
 python -m pip install -e . pytest
 pytest -q
+```
+
+If GitHub says `Repository not found`, open your repository page in the browser,
+click **Code**, copy the HTTPS URL, and replace only this part:
+
+```bat
+git clone https://github.com/shtik/optionbot_codex.git optionbot_codex
 ```
 
 If you already cloned the repository to `C:\Users\shtik\optionbot_codex`, skip
